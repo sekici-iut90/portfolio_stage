@@ -1,0 +1,187 @@
+/* Base */
+.hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 1.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Personnages voilés */
+.decorative-figures {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.veiled-figure {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    filter: blur(20px);
+}
+
+.veiled-figure.left {
+    left: 5%;
+    top: 30%;
+}
+
+.veiled-figure.right {
+    right: 5%;
+    top: 50%;
+}
+
+/* Titre */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Sous-titre */
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    font-family: 'Fira Code', monospace;
+    color: #2dd4bf;
+    min-height: 2.5rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    text-shadow: 0 0 10px rgba(45, 212, 191, 0.5);
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Effets texte */
+.wave {
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    75% { transform: rotate(15deg); }
+    90% { transform: rotate(0deg); }
+}
+
+.blink {
+    animation: blink 1s steps(2, start) infinite;
+    display: inline-block;
+    margin-left: 1px;
+}
+
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
+/* Bouton */
+.hero-button {
+    margin-top: 3rem;
+    padding: 0.75rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(to right, #14b8a6, #22d3ee, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.6);
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #06b6d4, #3b82f6, #6366f1);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-button:hover::before {
+    opacity: 1;
+}
+
+.hero-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.5);
+}
+
+.arrow-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Éléments décoratifs */
+.decorative-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #2dd4bf;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.floating-dot:nth-child(1) { left: 10%; top: 20%; }
+.floating-dot:nth-child(2) { left: 85%; top: 30%; width: 12px; height: 12px; }
+.floating-dot:nth-child(3) { left: 25%; top: 70%; }
+.floating-dot:nth-child(4) { left: 70%; top: 80%; width: 10px; height: 10px; }
+.floating-dot:nth-child(5) { left: 50%; top: 10%; }

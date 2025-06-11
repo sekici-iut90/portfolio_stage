@@ -1,0 +1,64 @@
+.formations-section {
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: white;
+    padding: 4rem 1.5rem;
+}
+
+.formations-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #22d3ee;
+}
+
+.formations-timeline {
+    position: relative;
+    border-left: 1px solid #06b6d4;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+}
+
+.formation-item {
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.timeline-point {
+    position: absolute;
+    left: -1.25rem;
+    top: 0.375rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #22d3ee;
+    border-radius: 9999px;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.formation-year {
+    font-size: 0.875rem;
+    color: #67e8f9;
+    font-weight: 500;
+}
+
+.formation-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.formation-place {
+    font-style: italic;
+    color: #a5f3fc;
+    font-size: 0.875rem;
+}
+
+.formation-description {
+    color: #d1d5db;
+    margin-top: 0.5rem;
+}
