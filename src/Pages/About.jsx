@@ -131,7 +131,7 @@ export default function About() {
                     transition={{ duration: 0.6, delay: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    02 - 02 • En savoir plus
+                    02 • En savoir plus
                 </motion.p>
 
                 <div className="entreprise-blocks">

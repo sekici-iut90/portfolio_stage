@@ -8,51 +8,101 @@ export default function StagePage() {
 
     const featureDetails = {
         "Gestion des utilisateurs": {
-            description: "Système complet de gestion des habilitations pour le personnel pénitentiaire",
-            technologies: ["TypeScript", "PostgreSQL", "JWT", "Bcrypt"],
-            tasks: [
-                "Conception du modèle de données des utilisateurs",
-                "Mise en place d'un système de rôles et permissions",
-                "Développement des interfaces d'administration",
-                "Implémentation de l'authentification sécurisée"
-            ]
+            description: (
+                <>
+                    <p>Ce module a été conçu pour offrir au système CDESA une gestion centralisée et sécurisée des habilitations du personnel pénitentiaire. Il permet la création et la supervision des profils utilisateurs avec un contrôle granulaire des accès.</p>
+
+                    <h4>Fonctionnalités clés :</h4>
+                    <ul>
+                        <li>Double système d'habilitation (permanent/temporaire)</li>
+                        <li>Attribution des droits par zone sécurisée (sas, quartiers, zones techniques)</li>
+                        <li>Workflow de validation hiérarchique</li>
+                        <li>Journalisation complète des modifications</li>
+                    </ul>
+
+                    <h4>Implémentation technique :</h4>
+                    <ul>
+                        <li>TypeScript avec validation Zod des entrées</li>
+                        <li>PostgreSQL pour le stockage des historiques</li>
+                        <li>Chiffrement des données sensibles</li>
+                        <li>Mécanisme de révocation instantanée</li>
+                    </ul>
+                </>
+            )
         },
         "Gestion des autorisations d'accès": {
-            description: "Module de gestion des accès temporaires et permanents",
-            technologies: ["PDFKit", "Nodemailer", "QR Code"],
-            tasks: [
-                "Workflow de validation des demandes d'accès",
-                "Génération automatisée des badges PDF",
-                "Système de QR code pour vérification",
-                "Intégration avec le registre des visiteurs"
-            ]
+            description: (
+                <>
+                    <p>Système complet de gestion des circulations dans l'établissement, incluant la nouveauté de la gestion véhicule/personne.</p>
+
+                    <h4>Processus innovant :</h4>
+                    <ol>
+                        <li>Saisie de la demande (plateforme ou formulaire papier scanné)</li>
+                        <li>Vérification automatique des antécédents</li>
+                        <li>Validation par le service sécurité</li>
+                        <li>Génération du badge avec QR code dynamique</li>
+                    </ol>
+
+                    <h4>Module véhicules :</h4>
+                    <ul>
+                        <li>Fiche véhicule liée au conducteur habilité</li>
+                        <li>Contrôle technique et assurance à jour</li>
+                        <li>Génération de l'autorisation spécifique</li>
+                        <li>Intégration avec le registre des entrées</li>
+                    </ul>
+                </>
+            )
         },
         "Reporting et traçabilité": {
-            description: "Tableaux de bord et outils d'analyse pour la sécurité",
-            technologies: ["Chart.js", "ExcelJS", "Cron"],
-            tasks: [
-                "Historique complet des mouvements",
-                "Génération de rapports périodiques",
-                "Alertes de sécurité configurables",
-                "Export des données pour audit"
-            ]
+            description: (
+                <>
+                    <p>Outil de production des rapports réglementaires et de suivi des activités.</p>
+
+                    <h4>Fonctionnalités :</h4>
+                    <ul>
+                        <li>Génération automatique des documents officiels</li>
+                        <li>Historique inaltérable des mouvements</li>
+                        <li>Tableaux de bord personnalisables</li>
+                        <li>Export aux formats PDF, Excel et CSV</li>
+                    </ul>
+
+                    <h4>Conformité :</h4>
+                    <ul>
+                        <li>Respect du standard ANSSI</li>
+                        <li>Horodatage certifié</li>
+                        <li>Archivage sécurisé 10 ans</li>
+                    </ul>
+                </>
+            )
         },
         "Architecture technique": {
-            description: "Refonte complète de l'infrastructure technique",
-            technologies: ["Knex.js", "TypeORM", "Docker"],
-            tasks: [
-                "Migration des données depuis SQLite",
-                "Optimisation des requêtes SQL",
-                "Mise en place des migrations de base",
-                "Documentation technique complète"
-            ]
+            description: (
+                <>
+                    <p>Refonte complète de l'infrastructure pour une solution robuste et maintenable.</p>
+
+                    <h4>Migration réussie :</h4>
+                    <ul>
+                        <li>De SQLite à PostgreSQL avec transfert sécurisé des données</li>
+                        <li>Modernisation du stack technique (TypeScript, Knex.js)</li>
+                        <li>API REST sécurisée</li>
+                        <li>Documentation Swagger complète</li>
+                    </ul>
+
+                    <h4>Sécurité renforcée :</h4>
+                    <ul>
+                        <li>Chiffrement AES-256 des données sensibles</li>
+                        <li>Journalisation des accès</li>
+                        <li>Sauvegardes automatiques</li>
+                        <li>Protection contre les injections SQL</li>
+                    </ul>
+                </>
+            )
         }
     };
 
     return (
         <section className="stage-section">
             <div className="container" id="stage-content">
-                {/* En-tête inchangé */}
                 <motion.div
                     className="header"
                     initial={{ opacity: 0, y: -30 }}
@@ -79,48 +129,50 @@ export default function StagePage() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    {/* Paragraphe et tags inchangés */}
                     <p className="paragraph">
                         Durant mon stage au sein de l'administration pénitentiaire, j'ai conçu et développé une nouvelle version complète
-                        du système de gestion des accès (CDESA) pour les sites sécurisés. J'ai entièrement repensé l'application en
-                        modernisant la stack technique (PostgreSQL, TypeScript, Knex.js) et en améliorant les fonctionnalités existantes
-                        tout en ajoutant un module complet de gestion des véhicules.
+                        du système de gestion des accès (CDESA). J'ai entièrement repensé l'application avec une stack moderne
+                        (PostgreSQL, TypeScript, Knex.js) tout en ajoutant un module innovant de gestion véhicule/personne.
                     </p>
 
-                    {/* Grille des fonctionnalités avec gestion du clic */}
+
+
                     <div className="features-grid">
                         {[
                             {
                                 title: "Gestion des utilisateurs",
                                 features: [
-                                    "Création et gestion des profils utilisateurs",
-                                    "Définition des niveaux d'accès (permanent/temporaire)",
-                                    "Attribution des droits par zone sécurisée",
-                                    "Système d'authentification sécurisé"
+                                    "Profils permanents/temporaires",
+                                    "Droits par zone sécurisée",
+                                    "Workflow de validation",
+                                    "Journal des modifications"
                                 ]
                             },
                             {
                                 title: "Gestion des autorisations d'accès",
                                 features: [
-                                    "Enregistrement des véhicules liés aux entreprises",
-                                    "Processus de validation des demandes d'accès",
-                                    "Génération automatique des autorisations PDF",
-                                    "Liaison avec les autorisations personnelles"
+                                    "Nouveau module véhicules",
+                                    "Badges avec QR code",
+                                    "Processus complet",
+                                    "Intégration registre"
                                 ]
                             },
                             {
                                 title: "Reporting et traçabilité",
                                 features: [
-                                    "Historique complet des autorisations d'accès",
-                                    "Tableau de bord administratif"
+                                    "Rapports réglementaires",
+                                    "Historique des mouvements",
+                                    "Tableaux de bord",
+                                    "Export multi-formats"
                                 ]
                             },
                             {
                                 title: "Architecture technique",
                                 features: [
-                                    "Migration de SQLite à PostgreSQL",
-                                    "Refonte complète du back-end en TypeScript",
-                                    "Utilisation de Knex.js pour les requêtes SQL",
+                                    "Migration SQLite → PostgreSQL",
+                                    "API REST sécurisée",
+                                    "Documentation Swagger",
+                                    "Sauvegardes automatiques"
                                 ]
                             }
                         ].map((block, i) => (
@@ -145,7 +197,6 @@ export default function StagePage() {
                         ))}
                     </div>
 
-                    {/* Modal des détails */}
                     <AnimatePresence>
                         {selectedCard && (
                             <motion.div
@@ -168,27 +219,9 @@ export default function StagePage() {
                                     >
                                         &times;
                                     </button>
-                                    <h3>{selectedCard}</h3>
-                                    <p className="modal-description">
-                                        {featureDetails[selectedCard].description}
-                                    </p>
-
-                                    <div className="modal-section">
-                                        <h4>Technologies utilisées</h4>
-                                        <div className="tech-tags">
-                                            {featureDetails[selectedCard].technologies.map(tech => (
-                                                <span key={tech} className="tech-tag">{tech}</span>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="modal-section">
-                                        <h4>Tâches réalisées</h4>
-                                        <ul className="task-list">
-                                            {featureDetails[selectedCard].tasks.map((task, i) => (
-                                                <li key={i}>{task}</li>
-                                            ))}
-                                        </ul>
+                                    <h2>{selectedCard} – Détails</h2>
+                                    <div className="modal-body">
+                                        {featureDetails[selectedCard]?.description}
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -203,9 +236,9 @@ export default function StagePage() {
                     >
                         <h3 className="achievement-title">Réalisation complète</h3>
                         <p>
-                            J'ai développé cette application de A à Z, depuis l'analyse des besoins jusqu'au déploiement,
-                            en passant par la conception technique, le développement et la documentation. Le projet a été
-                            intégralement livré et mis en production à la fin de mon stage.
+                            Développement de A à Z incluant : analyse des besoins, conception technique,
+                            développement full-stack, documentation utilisateur et technique, formation
+                            des personnels et mise en production.
                         </p>
                     </motion.div>
                 </motion.div>

@@ -1,4 +1,4 @@
-/* Container général */
+/* stages.css */
 .stage-section {
     background-color: #0f172a;
     color: #e0e7ff;
@@ -12,7 +12,6 @@
     margin: 0 auto;
 }
 
-/* Header */
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +45,6 @@
     transition: transform 0.3s ease;
 }
 
-/* Paragraphs */
 .paragraph {
     font-size: 1.125rem;
     line-height: 1.7;
@@ -55,7 +53,6 @@
     max-width: 800px;
 }
 
-/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +78,6 @@
     transform: translateY(-2px);
 }
 
-/* Grid des features */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -89,7 +85,6 @@
     margin-top: 3rem;
 }
 
-/* Carte feature */
 .feature-card {
     background-color: #1e293b;
     border-left: 4px solid #06b6d4;
@@ -97,7 +92,7 @@
     border-radius: 0.75rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
 }
@@ -151,13 +146,6 @@
     top: -3px;
 }
 
-.feature-note {
-    font-style: italic;
-    color: #94a3b8;
-    margin: 1rem 0;
-    font-size: 0.9rem;
-}
-
 .feature-link {
     display: inline-block;
     color: #38bdf8;
@@ -182,55 +170,6 @@
     transform: translateX(3px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .logo {
-        height: 70px;
-        margin-top: 1rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .stage-section {
-        padding: 3rem 1rem;
-    }
-
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-}
-.achievement {
-    margin-top: 4rem;
-    padding: 2rem;
-    background: rgba(6, 182, 212, 0.1);
-    border-left: 4px solid #06b6d4;
-    border-radius: 0.5rem;
-}
-
-.achievement-title {
-    color: #06b6d4;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Ajouts CSS pour les modales */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -247,9 +186,9 @@
 
 .modal-content {
     background: #1e293b;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 0.8rem;
-    max-width: 700px;
+    max-width: 800px;
     width: 90%;
     max-height: 80vh;
     overflow-y: auto;
@@ -258,62 +197,35 @@
     position: relative;
 }
 
-.modal-content h3 {
-    color: #22d3ee;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.modal-description {
-    color: #cbd5e1;
+.modal-content h2 {
+    color: #06b6d4;
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(6, 182, 212, 0.3);
 }
 
-.modal-section {
-    margin-bottom: 1.5rem;
+.modal-body {
+    line-height: 1.7;
+    color: #e2e8f0;
 }
 
-.modal-section h4 {
+.modal-body h4 {
     color: #38bdf8;
-    margin-bottom: 0.5rem;
+    margin: 1.5rem 0 0.8rem;
     font-size: 1.1rem;
 }
 
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.tech-tag {
-    background: rgba(6, 182, 212, 0.2);
-    color: #06b6d4;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
-
-.task-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 0.5rem;
-}
-
-.task-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-    color: #e2e8f0;
-    position: relative;
+.modal-body ul, .modal-body ol {
+    margin: 0.8rem 0;
     padding-left: 1.5rem;
 }
 
-.task-list li::before {
-    content: '▹';
-    color: #06b6d4;
-    position: absolute;
-    left: 0;
+.modal-body li {
+    margin-bottom: 0.5rem;
+}
+
+.modal-body p {
+    margin-bottom: 1.2rem;
 }
 
 .close-button {
@@ -332,12 +244,54 @@
     color: #f8fafc;
 }
 
-/* Animation des cartes */
-.feature-card {
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+.achievement {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(6, 182, 212, 0.1);
+    border-left: 4px solid #06b6d4;
+    border-radius: 0.5rem;
 }
 
-.feature-card:active {
-    transform: scale(0.98);
+.achievement-title {
+    color: #06b6d4;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .logo {
+        height: 70px;
+        margin-top: 1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stage-section {
+        padding: 3rem 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }
