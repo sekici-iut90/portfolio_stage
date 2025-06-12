@@ -94,7 +94,7 @@ const competencesData = [
                                 onClick={() => handleImageClick(code)}
                                 style={{ cursor: 'zoom-in' }}
                             />
-                            <figcaption className="image-caption">Figure 5 : La visualisation du pdf d'autorisation d'accès</figcaption>
+                            <figcaption className="image-caption">Figure 5 : extrait de code pour la gestion des autorisations validées côté main process </figcaption>
                         </figure>
                         <figure className="image-container">
                             <img
@@ -104,13 +104,12 @@ const competencesData = [
                                 onClick={() => handleImageClick(code1)}
                                 style={{ cursor: 'zoom-in' }}
                             />
-                            <figcaption className="image-caption">Figure 6 : La visualisation du pdf d'autorisation d'accès</figcaption>
+                            <figcaption className="image-caption">Figure 6 : Fonction de récupération des autorisations validées (pour l'administrateur)</figcaption>
                         </figure>
                     <p>Pendant mon stage, j’ai veillé à appliquer plusieurs bonnes pratiques, tant au niveau de la conception que du développement. </p>
-                    <p>En conception, j’ai participé à la modélisation et à l’amélioration des structures de données pour qu’elles soient plus cohérentes et faciles à maintenir. Par exemple, j’ai organisé les données de manière à faciliter leur manipulation dans l’application et à éviter des relations complexes inutiles.
-
-                    J’ai aussi structuré l’architecture du code pour séparer clairement la logique métier de la présentation, ce qui rend le code plus propre et plus facile à faire évoluer.                        </p>
-
+                    <p>En conception, j’ai participé à la modélisation des structures de données pour assurer leur cohérence et faciliter leur manipulation dans l’application. Par exemple, dans la gestion des autorisations, j’ai organisé les relations entre utilisateurs, services, structures et entités associées (personnes, entreprises, associations) de manière claire et optimisée comme illustré à la <strong> Figure 5</strong>, afin d’éviter des jointures complexes inutiles et de simplifier les requêtes.
+                    </p>
+                        <p>Au niveau du développement, j’ai structuré le code pour séparer clairement la logique métier de la communication entre backend et frontend. La fonction dédiée aux requêtes SQL, détaillée à la <strong>Figure 6</strong>, est distincte du handler ipcMain.handle qui sert d’interface IPC. Cette séparation améliore la lisibilité du code, facilite la maintenance, et permet de réutiliser les fonctions métier facilement.</p>
                         <p>Grâce à ce stage, j’ai renforcé mes compétences en architecture logicielle, en organisation du code et en programmation propre, tout en découvrant l’importance de penser la maintenabilité et la sécurité dès la conception.</p>
 
 
@@ -132,8 +131,6 @@ const competencesData = [
     },
     {id: 1,
     title: "Compétence 4 :  Gérer des données de l’information",
-    description:
-"Mon stage au centre pénitentiaire m'a permis de mettre en pratique la compétence de réalisation d'application, évaluée par les acquis suivants : .",
     niveaux: [
     {
         niveau: "AC1 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
