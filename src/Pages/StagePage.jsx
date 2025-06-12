@@ -114,12 +114,20 @@ export default function StagePage() {
                         <h1 className="title">Centre pénitentiaire</h1>
                         <p className="subtitle">Stage de 2e année — Refonte du système de gestion des accès (CDESA)</p>
                     </div>
-                    <motion.img
-                        src={justiceLogo}
-                        alt="Logo Ministère de la Justice"
-                        className="logo"
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                    />
+
+                    <a
+                        href="https://www.justice.gouv.fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Visiter le site du Ministère de la Justice"
+                    >
+                        <motion.img
+                            src={justiceLogo}
+                            alt="Logo Ministère de la Justice"
+                            className="logo"
+                            whileHover={{ rotate: 5, scale: 1.1 }}
+                        />
+                    </a>
                 </motion.div>
 
                 <motion.div

@@ -66,13 +66,13 @@ export default function Hero() {
                 </motion.p>
 
                 <motion.a
-                    href="/projets"
+                    href="/stage"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 300 }}
                     className="hero-button"
                 >
-                    Voir mes projets <ArrowRight className="arrow-icon" />
+                    Voir mon stage <ArrowRight className="arrow-icon" />
                 </motion.a>
             </div>
 

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Hero.jsx";
 import About from "./Pages/About";
-import Projects from "./Pages/Projects";
+import Projects from "./Pages/competence.jsx";
 import Contact from "./Pages/Contact";
 import Formations from "./Pages/StagePage.jsx";
 

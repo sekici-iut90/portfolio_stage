@@ -52,6 +52,7 @@ export default function About() {
                     href="https://www.justice.gouv.fr/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="Visiter le site du Ministère de la Justice"
                 >
                     <motion.img
                         src={justiceLogo}
