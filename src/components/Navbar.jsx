@@ -9,7 +9,7 @@ export default function Navbar() {
                     <a href="/" className="navbar-link">Accueil</a>
                     <a href="/entreprise" className="navbar-link">Entreprise</a>
                     <a href="/stage" className="navbar-link">Stage</a>
-                    <a href="/projets" className="navbar-link">Projets</a>
+                    <a href="/competence" className="navbar-link">Compétence</a>
                 </div>
             </div>
         </nav>
