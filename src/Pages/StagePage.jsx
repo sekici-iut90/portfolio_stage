@@ -160,7 +160,6 @@ export default function StagePage() {
                                 title: "Gestion des autorisations d'accès",
                                 features: [
                                     "Nouveau module véhicules",
-                                    "Badges avec QR code",
                                     "Processus complet",
                                     "Intégration registre"
                                 ]
