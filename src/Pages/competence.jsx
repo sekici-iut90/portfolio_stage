@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../Competences.css'; // Assure-toi que le chemin est correct
+import '../Competences.css';
+import ajoutAuto from '../assets/ajout_auto.png';
+import tableau from '../assets/tableau.png';
 
 const competencesData = [
     {
@@ -11,17 +13,40 @@ const competencesData = [
         niveaux: [
             {
                 niveau: "AC1 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
-                acs: [
-                    "Lors de mon stage au centre pénitentiaire de Mulhouse-Lutterbach, j’ai participé à la conception et au développement d’une application de gestion des accès et autorisations, en collaboration avec le service CLSI. J’ai d’abord recueilli et analysé les besoins fonctionnels et non fonctionnels, portant sur la gestion des utilisateurs, des véhicules, ainsi que des associations et entreprises liées.\n" +
-                    "\n" +
-                    "J’ai ensuite formalisé ces exigences dans un Modèle Logique de Données détaillé, intégrant les différentes entités et leurs relations, en veillant à respecter les contraintes métier spécifiques au contexte pénitentiaire. Ce modèle a été révisé plusieurs fois pour garantir sa pertinence et sa robustesse.\n" +
-                    "\n" +
-                    "Pour la partie interface, j’ai conçu des maquettes interactives avec Figma, en privilégiant une ergonomie simple et efficace, et les ai ajustées selon les retours des utilisateurs.\n" +
-                    "\n" +
-                    "Techniquement, j’ai développé l’application en utilisant React et Tailwind CSS pour le frontend, Electron.js pour créer une application desktop multiplateforme, et Node.js avec Knex.js pour la gestion de la base PostgreSQL au backend. Cette architecture m’a permis de fournir une solution performante, sécurisée et adaptée aux besoins du centre.\n" +
-                    "\n" +
-                    "Cette expérience m’a permis de mettre en pratique la traduction des spécifications en une application fonctionnelle complète, alliant rigueur dans la modélisation des données et maîtrise des technologies modernes full-stack."
+                acs: (handleImageClick) => [
+                    <>
+                        <p>
+                            Lors de mon stage au centre pénitentiaire de Mulhouse-Lutterbach, j’ai participé à la conception et au développement d’une application de gestion des accès et autorisations, en autonomie. J’ai commencé par recueillir et analyser les besoins fonctionnels, portant notamment sur la gestion des utilisateurs, des véhicules, ainsi que des associations et entreprises partenaires qui sont utiles afin de crée l'autorisation d'accès (<strong>Figure 1</strong>).                        </p>
+                        <figure className="image-container">
+                            <img
+                                src={ajoutAuto}
+                                alt="Schéma des besoins fonctionnels"
+                                className="illustration-img zoomable"
+                                onClick={() => handleImageClick(ajoutAuto)}
+                                style={{ cursor: 'zoom-in' }}
+                            />
+                            <figcaption className="image-caption">Figure 1 : Formulaire qui permet d'ajouter une autorisation</figcaption>
+                        </figure>
 
+                        <p>
+                            Ces exigences ont ensuite été formalisées dans un modèle de données structuré, intégrant les différentes entités (utilisateurs, véhicules, rôles, structures…) et leurs relations, tout en respectant les contraintes métier spécifiques au contexte pénitentiaire.                        </p>
+                        <div className="image-placeholder">[Insérer image modélisation des données]</div>
+                        <p>
+                            Techniquement, j’ai développé l’application en utilisant React et Tailwind CSS pour le frontend, combinés à Electron.js pour en faire une application desktop multiplateforme. Le backend repose sur un serveur Node.js avec Knex.js pour la gestion des requêtes SQL vers une base PostgreSQL.                        </p>
+                        <div className="image-placeholder">[Insérer schéma architecture technique]</div>
+                        <figure className="image-container">
+                            <img
+                                src={tableau}
+                                alt="Schéma des besoins fonctionnels"
+                                className="illustration-img zoomable"
+                                onClick={() => handleImageClick(ajoutAuto)}
+                                style={{ cursor: 'zoom-in' }}
+                            />
+                            <figcaption className="image-caption">Figure 1 : Tableau regroupant toutes les autorisations d'accès</figcaption>
+                        </figure>
+                        <p>
+                            Cette architecture m’a permis de fournir une solution stable, sécurisée et efficace, entièrement adaptée aux besoins du centre. Ce projet m’a permis de mettre en œuvre l’ensemble du cycle de développement d’une application métier, de la phase d’analyse jusqu’à l’implémentation technique, en mobilisant mes compétences en conception de base de données et en développement full-stack.                        </p>
+                    </>
                 ],
             },
             {
@@ -32,53 +57,13 @@ const competencesData = [
                     "Adopter de bonnes pratiques de conception et de programmation",
                     "Vérifier et valider la qualité de l’application par les tests",
                 ],
-            },
-            {
-                niveau: "Niveau 3 (A3) - Semestres 5 & 6",
-                acs: [
-                    "Choisir et implémenter les architectures adaptées",
-                    "Faire évoluer une application existante",
-                    "Intégrer des solutions dans un environnement de production",
-                ],
-            },
+            }
         ],
     },
-    {
-        id: 2,
-        title: "Compétence 2 : Optimiser des applications",
-        description: "",
-        niveaux: [
-            {
-                niveau: "Niveau 1 (A1) - Semestres 1 & 2",
-                acs: [
-                    "Analyser un problème avec méthode (découpage en éléments algorithmiques simples, structure de données…)",
-                    "Comparer des algorithmes pour des problèmes classiques (tris simples, recherche…)",
-                    "Formaliser et mettre en œuvre des outils mathématiques pour l'informatique",
-                ],
-            },
-            {
-                niveau: "Niveau 2 (A2) - Semestres 3 & 4",
-                acs: [
-                    "Choisir des structures de données complexes adaptées au problème",
-                    "Utiliser des techniques algorithmiques adaptées pour des problèmes complexes",
-                    "Comprendre les enjeux et moyens de sécurisation des données et du code",
-                    "Évaluer l'impact environnemental et sociétal des solutions proposées",
-                ],
-            },
-            {
-                niveau: "Niveau 3 (A3) - Semestres 5 & 6",
-                acs: [
-                    "Anticiper les résultats de diverses métriques (temps d'exécution, occupation mémoire…)",
-                    "Profiler, analyser et justifier le comportement d'un code existant",
-                    "Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application",
-                ],
-            },
-        ],
-    },
-    // Ajoute les autres compétences ici si besoin
+    // autres compétences...
 ];
 
-function Competence({ competence }) {
+function Competence({ competence, handleImageClick }) {
     const [openNiveauIndex, setOpenNiveauIndex] = useState(null);
 
     const toggleNiveau = (index) => {
@@ -102,7 +87,7 @@ function Competence({ competence }) {
                     </button>
                     <AnimatePresence>
                         {openNiveauIndex === i && (
-                            <motion.ul
+                            <motion.div
                                 id={`niveau-content-${competence.id}-${i}`}
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: 'auto', opacity: 1 }}
@@ -110,10 +95,14 @@ function Competence({ competence }) {
                                 transition={{ duration: 0.3 }}
                                 className="ac-list"
                             >
-                                {niveau.acs.map((ac, j) => (
-                                    <li key={j}>{ac}</li>
-                                ))}
-                            </motion.ul>
+                                {Array.isArray(niveau.acs)
+                                    ? niveau.acs.map((ac, j) => (
+                                        <div key={j} className="ac-item">
+                                            <li>{ac}</li>
+                                        </div>
+                                    ))
+                                    : <div className="ac-item">{niveau.acs(handleImageClick)}</div>}
+                            </motion.div>
                         )}
                     </AnimatePresence>
                 </div>
@@ -123,12 +112,36 @@ function Competence({ competence }) {
 }
 
 export default function Competences() {
+    const [zoomedImage, setZoomedImage] = useState(null);
+
+    const handleImageClick = (src) => {
+        setZoomedImage(src);
+    };
+
+    const closeImage = () => {
+        setZoomedImage(null);
+    };
+
     return (
         <div className="competences-container">
             <h1 className="page-title">Compétences du B.U.T. Informatique</h1>
             {competencesData.map((comp) => (
-                <Competence key={comp.id} competence={comp} />
+                <Competence key={comp.id} competence={comp} handleImageClick={handleImageClick} />
             ))}
+
+            <AnimatePresence>
+                {zoomedImage && (
+                    <motion.div
+                        className="image-modal"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closeImage}
+                    >
+                        <img src={zoomedImage} alt="Zoom" className="zoomed-img" />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
