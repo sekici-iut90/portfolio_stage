@@ -116,16 +116,6 @@ const competencesData = [
 
                     </>
                 ]
-
-            },
-            {
-                niveau: "       AC4 : Vérifier et valider la qualité de l’application par les tests",
-                acs: [
-                    "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
-                    "Appliquer des principes d’accessibilité et d’ergonomie",
-                    "Adopter de bonnes pratiques de conception et de programmation",
-                    "Vérifier et valider la qualité de l’application par les tests",
-                ],
             }
         ],
     },

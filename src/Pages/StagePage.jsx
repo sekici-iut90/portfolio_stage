@@ -140,7 +140,7 @@ export default function StagePage() {
                     <p className="paragraph">
                         Durant mon stage au sein de l'administration pénitentiaire, j'ai conçu et développé une nouvelle version complète
                         du système de gestion des accès (CDESA). J'ai entièrement repensé l'application avec une stack moderne
-                        (PostgreSQL, TypeScript, Knex.js) tout en ajoutant un module innovant de gestion véhicule/personne.
+                        (PostgreSQL, TypeScript, Knex.js, Electron.js) tout en ajoutant un module innovant de gestion véhicule/personne.
                     </p>
 
 
@@ -152,7 +152,6 @@ export default function StagePage() {
                                 features: [
                                     "Profils permanents/temporaires",
                                     "Droits par zone sécurisée",
-                                    "Workflow de validation",
                                     "Journal des modifications"
                                 ]
                             },
@@ -170,7 +169,6 @@ export default function StagePage() {
                                     "Rapports réglementaires",
                                     "Historique des mouvements",
                                     "Tableaux de bord",
-                                    "Export multi-formats"
                                 ]
                             },
                             {
@@ -179,7 +177,6 @@ export default function StagePage() {
                                     "Migration SQLite → PostgreSQL",
                                     "API REST sécurisée",
                                     "Documentation Swagger",
-                                    "Sauvegardes automatiques"
                                 ]
                             }
                         ].map((block, i) => (
@@ -243,9 +240,10 @@ export default function StagePage() {
                     >
                         <h3 className="achievement-title">Réalisation complète</h3>
                         <p>
-                            Développement de A à Z incluant : analyse des besoins, conception technique,
-                            développement full-stack, documentation utilisateur et technique, formation
-                            des personnels et mise en production.
+                            Durant mon stage, j’ai mené à bien la réalisation complète d’un projet de gestion des autorisations d’accès, en assurant toutes les étapes clés du cycle de développement. J’ai commencé par l’analyse des besoins en lien direct avec les utilisateurs finaux et les responsables métier, afin de bien cerner les attentes fonctionnelles et techniques. J’ai ensuite conçu l’architecture de l’application ainsi que le modèle de données, en veillant à assurer une structure cohérente, évolutive et facile à maintenir.
+
+                            </p>
+                        <p>Le développement a été réalisé en full-stack, en utilisant React, TypeScript, Tailwind CSS pour le frontend, et Node.js avec Knex.js et PostgreSQL côté backend. J’ai également intégré l’application dans un environnement Electron afin de proposer une interface bureau adaptée aux besoins du centre. Parallèlement, j’ai rédigé une documentation technique détaillée pour faciliter la prise en main et la maintenance, ainsi qu’un guide utilisateur clair à destination du personnel.
                         </p>
                     </motion.div>
                 </motion.div>

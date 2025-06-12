@@ -95,7 +95,7 @@ export default function About() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        Travailler au sein d'un environnement aussi structuré m'a permis de mettre en pratique mes compétences en développement tout en m'adaptant aux enjeux spécifiques du secteur pénitentiaire. L'écoute, la rigueur et le respect des normes (notamment RGAA et sécurité) sont au cœur de chaque projet mené.
+                        Travailler au sein d'un environnement aussi structuré m'a permis de mettre en pratique mes compétences en développement tout en m'adaptant aux enjeux spécifiques du secteur pénitentiaire. L'écoute, la rigueur et le respect des normes  sont au cœur de chaque projet mené.
                     </motion.p>
                 </AnimatePresence>
 
