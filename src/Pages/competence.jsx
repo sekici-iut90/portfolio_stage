@@ -6,6 +6,7 @@ import tableau from '../assets/tableau.png';
 import pdf from '../assets/pdf.png'
 import code from '../assets/CODE.png'
 import code1 from '../assets/code2.png'
+import mld  from '../assets/mld2.png'
 
 const competencesData = [
     {
@@ -119,54 +120,82 @@ const competencesData = [
             }
         ],
     },
-    {id: 1,
+    {id: 2,
     title: "Compétence 4 :  Gérer des données de l’information",
     niveaux: [
     {
         niveau: "AC1 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
         acs: (handleImageClick) => [
             <>
-                <p>
-                    Lors de mon stage au centre pénitentiaire de Mulhouse-Lutterbach, j’ai participé à la conception et au développement d’une application de gestion des accès et autorisations, en autonomie. J’ai commencé par recueillir et analyser les besoins fonctionnels, portant notamment sur la gestion des utilisateurs, des véhicules, ainsi que des associations et entreprises partenaires qui sont utiles afin de crée l'autorisation d'accès (<strong>Figure 1</strong>).                        </p>
                 <figure className="image-container">
                     <img
-                        src={ajoutAuto}
+                        src={mld}
                         alt="Schéma des besoins fonctionnels"
                         className="illustration-img zoomable"
-                        onClick={() => handleImageClick(ajoutAuto)}
+                        onClick={() => handleImageClick(mld)}
                         style={{ cursor: 'zoom-in' }}
                     />
-                    <figcaption className="image-caption">Figure 1 : Formulaire qui permet d'ajouter une autorisation</figcaption>
+                    <figcaption className="image-caption">Figure 8 : Modèle logique de données final de l’application de gestion des autorisations</figcaption>
                 </figure>
+                 <p>
+                        J’ai travaillé à partir d’un brouillon de Modèle Logique de Données (MLD) existant. Après l’avoir confronté aux besoins du service et aux cas d’usage concrets, j’ai conçu un <strong>modèle complet</strong> intégrant de nouvelles entités nécessaires à la gestion des autorisations d’accès, des utilisateurs, des véhicules, des structures, ainsi que des rôles et des services.
+                    </p>
 
-                <p>
-                    Ces exigences ont ensuite été formalisées dans un modèle de données structuré, intégrant les différentes entités (utilisateurs, véhicules, rôles, structures…) et leurs relations, tout en respectant les contraintes métier spécifiques au contexte pénitentiaire.                        </p>
-                <div className="image-placeholder">[Insérer image modélisation des données]</div>
-                <p>
-                    Techniquement, j’ai développé l’application en utilisant React et Tailwind CSS pour le frontend, combinés à Electron.js pour en faire une application desktop multiplateforme. Le backend repose sur un serveur Node.js avec Knex.js pour la gestion des requêtes SQL vers une base PostgreSQL.                        </p>
-                <div className="image-placeholder">[Insérer schéma architecture technique]</div>
-                <figure className="image-container">
-                    <img
-                        src={tableau}
-                        alt="Schéma des besoins fonctionnels"
-                        className="illustration-img zoomable"
-                        onClick={() => handleImageClick(ajoutAuto)}
-                        style={{ cursor: 'zoom-in' }}
-                    />
-                    <figcaption className="image-caption">Figure 1 : Tableau regroupant toutes les autorisations d'accès</figcaption>
-                </figure>
-                <p>
-                    Cette architecture m’a permis de fournir une solution stable, sécurisée et efficace, entièrement adaptée aux besoins du centre. Ce projet m’a permis de mettre en œuvre l’ensemble du cycle de développement d’une application métier, de la phase d’analyse jusqu’à l’implémentation technique, en mobilisant mes compétences en conception de base de données et en développement full-stack.                        </p>
-            </>
-        ],
+                    <p>
+                        Le <strong>modèle présenté en Figure 8</strong> est le résultat de cette démarche itérative. Il intègre notamment les entités <code>users</code>, <code>roles</code>, <code>services</code>, <code>structures</code>, <code>entreprises</code>, <code>vehicules</code> ou encore <code>autorisations</code>, et illustre les relations entre ces éléments. J’ai notamment :
+                    </p>
+                    <ul className="list-disc list-inside ml-4">
+                        <li>Refactoré certaines relations complexes (<code>ManyToMany</code>) en relations plus simples (<code>OneToMany</code>/<code>ManyToOne</code>).</li>
+                        <li>Intégré une logique de suppression virtuelle via un champ <code>active</code>.</li>
+                        <li>Ajouté des champs de traçabilité comme <code>createdAt</code>, <code>updatedAt</code>, <code>createdBy</code> et <code>updatedBy</code>.</li>
+                        <li>Géré la migration de MariaDB vers MySQL à cause d’incompatibilités avec Doctrine ORM.</li>
+                        <li>Utilisé le composant Validator de Symfony pour valider les données saisies avant enregistrement.</li>
+                    </ul>
+
+                    <p>Ce travail m’a permis de renforcer mes compétences en modélisation de données et en optimisation de schémas relationnels, avec une approche orientée métier.</p>
+                </>
+
+                ],
     },
         {
             niveau: "    AC2 : Assurer la confidentialité des données (intégrité et sécurité)",
-            acs: [
-                "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
-                "Appliquer des principes d’accessibilité et d’ergonomie",
-                "Adopter de bonnes pratiques de conception et de programmation",
-                "Vérifier et valider la qualité de l’application par les tests",
+            acs: (handleImageClick) => [
+                <>
+                    <figure className="image-container">
+                        <img
+                            alt="Interface de gestion des rôles et permissions"
+                            className="illustration-img zoomable"
+                            style={{ cursor: 'zoom-in' }}
+                        />
+                        <figcaption className="image-caption">
+                            Figure 9 : Interface de gestion des rôles et permissions dans l’application
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        Dans le cadre de mon stage, j’ai mis en œuvre plusieurs mécanismes visant à garantir la <strong>sécurité, la confidentialité et l’intégrité des données</strong> de l’application de gestion des autorisations d’accès (<strong>Figure 9</strong>).
+                    </p>
+
+                    <p>
+                        J’ai conçu une gestion fine des <strong>permissions</strong> basée sur les rôles attribués aux utilisateurs (agent, chef de service, administrateur, etc.). Les <strong>données sont filtrées dynamiquement</strong> selon ces rôles. Par exemple, un utilisateur peut consulter les autorisations, tandis qu’un administrateur peut également en créer, modifier ou supprimer.
+                    </p>
+
+                    <p>
+                        J’ai mis en place une <strong>suppression virtuelle</strong> via un champ <code>active</code>, afin d’éviter toute suppression définitive non intentionnelle et de garantir l’<strong>intégrité des données</strong> (<strong>Figure 11</strong>).
+                    </p>
+
+                    <p>
+                        J’ai également ajouté des champs de <strong>traçabilité</strong> tels que <code>createdAt</code>, <code>createdBy</code>, <code>updatedAt</code> et <code>updatedBy</code>, utiles pour les audits internes et le suivi des modifications (<strong>Figure 11</strong>).
+                    </p>
+
+                    <p>
+                        Pour renforcer la <strong>confidentialité</strong>, les documents PDF générés sont stockés dans un dossier sécurisé non accessible publiquement (<code>/inc</code>), conformément aux directives internes. Des <strong>confirmations utilisateur</strong> sont également intégrées avant l’exécution d’actions sensibles (comme l’envoi d’un email), afin de limiter les erreurs.
+                    </p>
+
+                    <p>
+                        Ce travail m’a permis de mieux comprendre les <strong>enjeux liés à la sécurité des données</strong> en environnement professionnel, et d’appliquer des bonnes pratiques concrètes en matière de développement sécurisé.
+                    </p>
+                </>
             ],
         },
         {
