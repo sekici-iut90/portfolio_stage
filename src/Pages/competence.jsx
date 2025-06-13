@@ -10,6 +10,7 @@ import mld  from '../assets/mld2.png'
 import user  from '../assets/utilisateur.png'
 import scheam  from '../assets/schema.png'
 import lo  from '../assets/logique.png'
+import test  from '../assets/test.png'
 
 const competencesData = [
     {
@@ -211,9 +212,10 @@ const competencesData = [
 
                     <figure className="image-container">
                         <img
+                            src={test}
                             alt="champs de tracabilité"
                             className="illustration-img zoomable"
-                            onClick={() => handleImageClick(scheam)}
+                            onClick={() => handleImageClick(test)}
                             style={{ cursor: 'zoom-in' }}
                         />
                         <figcaption className="image-caption">
