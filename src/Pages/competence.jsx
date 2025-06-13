@@ -9,6 +9,7 @@ import code1 from '../assets/code2.png'
 import mld  from '../assets/mld2.png'
 import user  from '../assets/utilisateur.png'
 import scheam  from '../assets/schema.png'
+import lo  from '../assets/logique.png'
 
 const competencesData = [
     {
@@ -51,6 +52,16 @@ const competencesData = [
                         </figure>
 
                         <p>En ce qui concerne la <strong>Figure 2</strong>, ’ai conçu et développé une interface de gestion des autorisations permettant de visualiser de manière claire et organisée les différentes demandes d’accès. Chaque ligne du tableau récapitule les informations essentielles telles que l’identité du demandeur, le type d’autorisation (temporaire ou permanente), l’organisme concerné, le motif, les dates de début et de fin, ainsi que le statut actuel de l’autorisation. Cette interface facilite la recherche et le suivi des autorisations grâce à un champ de recherche intégré. Ce tableau constitue un outil central pour le pilotage opérationnel des accès, garantissant une traçabilité précise et une gestion efficace des droits.</p>
+                        <figure className="image-container">
+                            <img
+                                src={lo}
+                                alt="Schéma des besoins fonctionnels"
+                                className="illustration-img zoomable"
+                                onClick={() => handleImageClick(lo)}
+                                style={{ cursor: 'zoom-in' }}
+                            />
+                            <figcaption className="image-caption">Figure 3 : Architecture technique de l'application</figcaption>
+                        </figure>
                         <p>
                             Cette architecture m’a permis de fournir une solution stable, sécurisée et efficace, entièrement adaptée aux besoins du centre. Ce projet m’a permis de mettre en œuvre l’ensemble du cycle de développement d’une application métier, de la phase d’analyse jusqu’à l’implémentation technique, en mobilisant mes compétences en conception de base de données et en développement full-stack.                        </p>
                     </>
