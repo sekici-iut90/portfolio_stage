@@ -7,6 +7,8 @@ import pdf from '../assets/pdf.png'
 import code from '../assets/CODE.png'
 import code1 from '../assets/code2.png'
 import mld  from '../assets/mld2.png'
+import user  from '../assets/utilisateur.png'
+import scheam  from '../assets/schema.png'
 
 const competencesData = [
     {
@@ -163,12 +165,14 @@ const competencesData = [
                 <>
                     <figure className="image-container">
                         <img
+                            src={user}
                             alt="Interface de gestion des rôles et permissions"
                             className="illustration-img zoomable"
+                            onClick={() => handleImageClick(user)}
                             style={{ cursor: 'zoom-in' }}
                         />
                         <figcaption className="image-caption">
-                            Figure 9 : Interface de gestion des rôles et permissions dans l’application
+                            Figure 9 : Interface de gestion des utilisateurs
                         </figcaption>
                     </figure>
 
@@ -176,25 +180,39 @@ const competencesData = [
                         Dans le cadre de mon stage, j’ai mis en œuvre plusieurs mécanismes visant à garantir la <strong>sécurité, la confidentialité et l’intégrité des données</strong> de l’application de gestion des autorisations d’accès (<strong>Figure 9</strong>).
                     </p>
 
-                    <p>
-                        J’ai conçu une gestion fine des <strong>permissions</strong> basée sur les rôles attribués aux utilisateurs (agent, chef de service, administrateur, etc.). Les <strong>données sont filtrées dynamiquement</strong> selon ces rôles. Par exemple, un utilisateur peut consulter les autorisations, tandis qu’un administrateur peut également en créer, modifier ou supprimer.
-                    </p>
+                    <figure className="image-container">
+                        <img
+                            src={scheam}
+                            alt="Interface de gestion des rôles et permissions"
+                            className="illustration-img zoomable"
+                            onClick={() => handleImageClick(scheam)}
+                            style={{ cursor: 'zoom-in' }}
+                        />
+                        <figcaption className="image-caption">
+                            Figure 10 : Exemple de logique d’autorisation implémentée
+                        </figcaption>
+                    </figure>
 
                     <p>
-                        J’ai mis en place une <strong>suppression virtuelle</strong> via un champ <code>active</code>, afin d’éviter toute suppression définitive non intentionnelle et de garantir l’<strong>intégrité des données</strong> (<strong>Figure 11</strong>).
+                        J’ai conçu une gestion fine des <strong>permissions</strong> basée sur les rôles attribués aux utilisateurs (valideur, portier, administrateur, etc.). Les <strong>données sont filtrées dynamiquement</strong> selon ces rôles. Par exemple, un portier peut consulter les autorisations, tandis qu’un utilisateur basique peut également en créer ou les modifier.
                     </p>
 
+
+                    <figure className="image-container">
+                        <img
+                            alt="champs de tracabilité"
+                            className="illustration-img zoomable"
+                            onClick={() => handleImageClick(scheam)}
+                            style={{ cursor: 'zoom-in' }}
+                        />
+                        <figcaption className="image-caption">
+                            Figure 11 : Champs de traçabilité
+                        </figcaption>
+                    </figure>
                     <p>
                         J’ai également ajouté des champs de <strong>traçabilité</strong> tels que <code>createdAt</code>, <code>createdBy</code>, <code>updatedAt</code> et <code>updatedBy</code>, utiles pour les audits internes et le suivi des modifications (<strong>Figure 11</strong>).
                     </p>
 
-                    <p>
-                        Pour renforcer la <strong>confidentialité</strong>, les documents PDF générés sont stockés dans un dossier sécurisé non accessible publiquement (<code>/inc</code>), conformément aux directives internes. Des <strong>confirmations utilisateur</strong> sont également intégrées avant l’exécution d’actions sensibles (comme l’envoi d’un email), afin de limiter les erreurs.
-                    </p>
-
-                    <p>
-                        Ce travail m’a permis de mieux comprendre les <strong>enjeux liés à la sécurité des données</strong> en environnement professionnel, et d’appliquer des bonnes pratiques concrètes en matière de développement sécurisé.
-                    </p>
                 </>
             ],
         },
