@@ -14,10 +14,9 @@ export default function StagePage() {
 
                     <h4>Fonctionnalités clés :</h4>
                     <ul>
-                        <li>Double système d'habilitation (permanent/temporaire)</li>
-                        <li>Attribution des droits par zone sécurisée (sas, quartiers, zones techniques)</li>
+                        <li>Double système d'habilitation</li>
+                        <li>Attribution des droits </li>
                         <li>Workflow de validation hiérarchique</li>
-                        <li>Journalisation complète des modifications</li>
                     </ul>
 
                     <h4>Implémentation technique :</h4>
@@ -25,7 +24,6 @@ export default function StagePage() {
                         <li>TypeScript avec validation Zod des entrées</li>
                         <li>PostgreSQL pour le stockage des historiques</li>
                         <li>Chiffrement des données sensibles</li>
-                        <li>Mécanisme de révocation instantanée</li>
                     </ul>
                 </>
             )
@@ -37,10 +35,9 @@ export default function StagePage() {
 
                     <h4>Processus innovant :</h4>
                     <ol>
-                        <li>Saisie de la demande (plateforme ou formulaire papier scanné)</li>
-                        <li>Vérification automatique des antécédents</li>
-                        <li>Validation par le service sécurité</li>
-                        <li>Génération du badge avec QR code dynamique</li>
+                        <li>Saisie de la demande (plateforme)</li>
+                        <li>Validation par le valideur</li>
+                        <li>Validation par la chef d'établissement</li>
                     </ol>
 
                     <h4>Module véhicules :</h4>
@@ -48,7 +45,6 @@ export default function StagePage() {
                         <li>Fiche véhicule liée au conducteur habilité</li>
                         <li>Contrôle technique et assurance à jour</li>
                         <li>Génération de l'autorisation spécifique</li>
-                        <li>Intégration avec le registre des entrées</li>
                     </ul>
                 </>
             )
@@ -61,17 +57,10 @@ export default function StagePage() {
                     <h4>Fonctionnalités :</h4>
                     <ul>
                         <li>Génération automatique des documents officiels</li>
-                        <li>Historique inaltérable des mouvements</li>
-                        <li>Tableaux de bord personnalisables</li>
-                        <li>Export aux formats PDF, Excel et CSV</li>
+                        <li>Historique des autorisations (crée par qui et validé par qui)</li>
+                        <li>Tableaux de bord</li>
                     </ul>
 
-                    <h4>Conformité :</h4>
-                    <ul>
-                        <li>Respect du standard ANSSI</li>
-                        <li>Horodatage certifié</li>
-                        <li>Archivage sécurisé 10 ans</li>
-                    </ul>
                 </>
             )
         },
@@ -82,18 +71,11 @@ export default function StagePage() {
 
                     <h4>Migration réussie :</h4>
                     <ul>
-                        <li>De SQLite à PostgreSQL avec transfert sécurisé des données</li>
+                        <li>De SQLite à PostgreSQL </li>
                         <li>Modernisation du stack technique (TypeScript, Knex.js)</li>
                         <li>API REST sécurisée</li>
                         <li>Documentation Swagger complète</li>
-                    </ul>
-
-                    <h4>Sécurité renforcée :</h4>
-                    <ul>
-                        <li>Chiffrement AES-256 des données sensibles</li>
                         <li>Journalisation des accès</li>
-                        <li>Sauvegardes automatiques</li>
-                        <li>Protection contre les injections SQL</li>
                     </ul>
                 </>
             )
