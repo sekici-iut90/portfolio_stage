@@ -40,7 +40,7 @@ const competencesData = [
 
                         <p>
                             Ces exigences ont ensuite été formalisées dans un modèle de données structuré, intégrant les différentes entités (utilisateurs, véhicules, rôles, structures…) et leurs relations, tout en respectant les contraintes métier spécifiques au contexte pénitentiaire.                        </p>
-                        <div className="image-placeholder">[Insérer image modélisation des données]</div>
+                     
                         <p>
                             Techniquement, j’ai développé l’application en utilisant React et Tailwind CSS pour le frontend, combinés à Electron.js pour en faire une application desktop multiplateforme. Le backend repose sur un serveur Node.js avec Knex.js pour la gestion des requêtes SQL vers une base PostgreSQL.                        </p>
                         <figure className="image-container">
@@ -162,10 +162,10 @@ const competencesData = [
                     </p>
                     <ul className="list-disc list-inside ml-4">
                         <li>Refactoré certaines relations complexes (<code>ManyToMany</code>) en relations plus simples (<code>OneToMany</code>/<code>ManyToOne</code>).</li>
-                        <li>Intégré une logique de suppression virtuelle via un champ <code>active</code>.</li>
+                       
                         <li>Ajouté des champs de traçabilité comme <code>createdAt</code>, <code>updatedAt</code>, <code>createdBy</code> et <code>updatedBy</code>.</li>
-                        <li>Géré la migration de MariaDB vers MySQL à cause d’incompatibilités avec Doctrine ORM.</li>
-                        <li>Utilisé le composant Validator de Symfony pour valider les données saisies avant enregistrement.</li>
+                      
+                     
                     </ul>
 
                     <p>Ce travail m’a permis de renforcer mes compétences en modélisation de données et en optimisation de schémas relationnels, avec une approche orientée métier.</p>
