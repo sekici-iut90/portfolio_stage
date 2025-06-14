@@ -11,6 +11,8 @@ import user  from '../assets/utilisateur.png'
 import scheam  from '../assets/schema.png'
 import lo  from '../assets/logique.png'
 import test  from '../assets/test.png'
+import voiture  from '../assets/voiture.png'
+import uti  from '../assets/uti.png'
 
 const competencesData = [
     {
@@ -231,12 +233,54 @@ const competencesData = [
         },
         {
             niveau: " AC4 : Manipuler des données hétérogènes",
-            acs: [
-                "Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences",
-                "Appliquer des principes d’accessibilité et d’ergonomie",
-                "Adopter de bonnes pratiques de conception et de programmation",
-                "Vérifier et valider la qualité de l’application par les tests",
+            acs: (handleImageClick) => [
+                <>
+
+                    <p>
+                        Durant mon stage, j’ai manipulé des données hétérogènes issues de différentes entités liées aux autorisations d’accès (personnes, véhicules, rôles, services, entreprises, etc.). Ces données, stockées dans une base PostgreSQL et interrogeables via Knex.js, ont été exploitées pour alimenter des interfaces dynamiques comme des tableaux filtrables (<strong>Figure 11</strong>).
+                    </p>
+
+                    <figure className="image-container">
+                        <img
+                            src={voiture}
+                            alt="champs de tracabilité"
+                            className="illustration-img zoomable"
+                            onClick={() => handleImageClick(voiture)}
+                            style={{ cursor: 'zoom-in' }}
+                        />
+                        <figcaption className="image-caption">
+                            Figure 12 : Formulaire d’ajout d’une autorisation, avec champs liés dynamiquement
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        J’ai conçu des formulaires React pour la saisie et la modification des données, en assurant leur validation et en reliant dynamiquement certains champs. Par exemple, la liste des véhicules est filtrée automatiquement selon l’entreprise ou l’association sélectionnée (<strong>Figure 12</strong>).
+                    </p>
+
+                    <figure className="image-container">
+                        <img
+                            src={uti}
+                            alt="champs de tracabilité"
+                            className="illustration-img zoomable"
+                            onClick={() => handleImageClick(uti)}
+                            style={{ cursor: 'zoom-in' }}
+                        />
+                        <figcaption className="image-caption">
+                            Figure 13 : Exemple de requête SQL avec jointures multiples via Knex.js
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        J’ai mis en place des <strong>requêtes relationnelles complexes</strong> pour croiser les données de plusieurs tables. Les jointures entre utilisateurs, rôles, services et véhicules m’ont permis d’afficher des vues synthétiques et contextualisées, notamment dans la page d’historique ou les exports administratifs (<strong>Figure 13</strong>).
+                    </p>
+
+
+                    <p>
+                        Cette manipulation de données m’a permis de comprendre comment <strong>structurer, lier et transformer</strong> les informations pour qu’elles soient utilisables aussi bien côté backend que frontend. Elle m’a également appris à <strong>gérer la cohérence des données</strong> lors des échanges entre les modules applicatifs (<strong>Figure 8</strong>).
+                    </p>
+                </>
             ],
+
         }
 ],
 },];
